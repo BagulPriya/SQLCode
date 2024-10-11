@@ -45,3 +45,10 @@ SELECT
 	 DENSE_RANK() over(order by salary) as dense_rank
 From Employees
 )t where  dense_rank=3
+
+---another way
+select top 1
+  salary,
+  DENSE_RANK() over(order by salary desc) as dense_rank
+from Employees
+group by salary

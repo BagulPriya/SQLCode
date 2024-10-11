@@ -1,4 +1,4 @@
-
+ 
 DROP TABLE IF EXISTS trips;
 
 CREATE TABLE trips (
