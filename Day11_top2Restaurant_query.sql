@@ -1,6 +1,6 @@
 DROP TABLE IF EXISTS cities;
 DROP TABLE IF EXISTS restaurants;
-DROP TABLE IF EXISTS orders;
+DROP TABLE  orders;
 -- Create cities table
 CREATE TABLE cities (
     city_id int Identity(1,1) PRIMARY KEY,
@@ -16,7 +16,7 @@ CREATE TABLE restaurants (
 );
 
 -- Create orders table with rating column
-CREATE TABLE orders (
+CREATE TABLE orders4 (
     order_id int Identity(1,1)PRIMARY KEY,
     restaurant_id INT,
     order_value DECIMAL(10, 2),
@@ -44,7 +44,7 @@ INSERT INTO restaurants (restaurant_name, city_id) VALUES
 ('MTR', 3);
 
 -- Insert data into orders table with rating
-INSERT INTO orders (restaurant_id, order_value, order_date, rating) VALUES
+INSERT INTO orders4 (restaurant_id, order_value, order_date, rating) VALUES
 (1, 500.00, '2024-01-01', 4),
 (1, 450.00, '2024-01-02', 5),
 (1, 550.00, '2024-01-03', 4),
@@ -75,7 +75,7 @@ INSERT INTO orders (restaurant_id, order_value, order_date, rating) VALUES
 
 SELECT * FROM cities;
 SELECT * FROM restaurants;
-SELECT * FROM orders;
+SELECT * FROM orders4;
 
 -- -- Interview Question
 
@@ -97,7 +97,7 @@ select * from
  from cities c
  join restaurants r
  on c.city_id=r.city_id
- join orders o
+ join orders4 o
  on r.restaurant_id=o.restaurant_id
  group by c.city_id,
  c.city_name,

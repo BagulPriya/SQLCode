@@ -1,7 +1,7 @@
 -- Day 32/100 Days Challenge
 -- 
 
-
+Drop table Employees4
 
 -- Create Employee table and insert data
 DROP TABLE IF EXISTS Employees4;
@@ -38,7 +38,7 @@ select
   id,
   name,
   salary,
-  Row_number() over(order by salary) as sal_asc,
+  Row_number() over(order by salary asc) as sal_asc,
   Row_number() over(order by salary desc) as sal_desc
 from Employees4
 )
@@ -67,3 +67,6 @@ select
 from ordered_salary
 where 
 ABS(sal_asc-sal_desc)=1
+
+--delete from Employees4
+--where id=10

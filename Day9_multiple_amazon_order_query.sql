@@ -48,6 +48,7 @@ INSERT INTO ITEMS (item_id, item_category) VALUES
 
 SELECT * FROM ITEMS;
 SELECT * FROM orders;
+--drop table ORDERS
 
 -- Amazon Asked Interview Questions
 --1. How many units were ordered yesterday?

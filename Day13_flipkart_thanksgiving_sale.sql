@@ -76,7 +76,7 @@ return category that has highest average sale in each month!
 select * from sales2
 select * from Products1
 select * from Customers
---join sale ana product
+--join sale and product
 --extract month
 --avg sale
 --group by month,category
